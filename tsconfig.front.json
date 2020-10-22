@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "rootDir": "client",
+    "outDir": "built",
+    "sourceMap": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "target": "es5",
+    "declarationDir": "built/types",
+    "declaration": true,
+    "typeRoots": ["node_modules/@types"],
+    "esModuleInterop": true,
+    "lib": ["es5", "es6", "dom"],
+    "strict": true,
+    "listEmittedFiles": true,
+    "listFiles": true
+  },
+  "exclude": [
+    ".vscode-test",
+    "node_modules",
+    "*/node_modules"
+  ],
+  "include": ["client/**/*.ts"]
+}

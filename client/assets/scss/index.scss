@@ -1,0 +1,10 @@
+@import './shared/variables.scss';
+@import './mixins/mixins.scss';
+
+@include reboot();
+html, body {
+    font-size: 16px;
+}
+body {
+    background-color: #fff;
+}

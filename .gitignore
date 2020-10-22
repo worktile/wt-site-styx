@@ -1,6 +1,9 @@
 # Logs
 logs
 *.log
+.nvm
+/bots/node_modules/
+package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -64,6 +67,8 @@ typings/
 
 # Output of 'npm pack'
 *.tgz
+*.zip
+*.rar
 
 # Yarn Integrity file
 .yarn-integrity
@@ -102,3 +107,22 @@ dist
 
 # TernJS port file
 .tern-port
+
+# other stuff
+.DS_Store
+Thumbs.db
+
+# IDE configurations
+.idea
+.vscode-test/
+*.vsix
+
+# build assets
+/output
+/dist
+log.md
+/built
+/dll
+output.zip
+out
+.history
