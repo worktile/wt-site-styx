@@ -1,0 +1,93 @@
+@mixin primary-before-point($bgc) {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: $bgc !important;
+    position: absolute;
+    left: -16px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 0;
+}
+
+@mixin primary-bgc-hover($bgc) {
+    background-color: $bgc !important;
+}
+
+@mixin hover-bg-mixin() {
+    .project-before-point::before {
+        @include primary-before-point($primary-project);
+    }
+    .okr-before-point::before {
+        @include primary-before-point($primary-okr);
+    }
+    .dev-before-point::before {
+        @include primary-before-point($primary-dev);
+    }
+
+    .project-bgc-hover:hover {
+        @include primary-bgc-hover($primary-project-hover-bg);
+    }
+    .okr-bgc-hover:hover {
+        @include primary-bgc-hover($primary-okr-hover-bg);
+    }
+    .dev-bgc-hover:hover {
+        @include primary-bgc-hover($primary-dev-hover-bg);
+    }
+    .blue-100-bgc-hover:hover {
+        @include primary-bgc-hover($hover-blue-100);
+    }
+    .blue-200-bgc-hover:hover {
+        @include primary-bgc-hover($hover-blue-200);
+    }
+    .blue-300-bgc-hover:hover {
+        @include primary-bgc-hover($hover-blue-300);
+    }
+    .blue-400-bgc-hover:hover {
+        @include primary-bgc-hover($hover-blue-400);
+    }
+    .blue-500-bgc-hover:hover {
+        @include primary-bgc-hover($hover-blue-500);
+    }
+    .blue-600-bgc-hover:hover {
+        @include primary-bgc-hover($hover-blue-600);
+    }
+    .green-100-bgc-hover:hover {
+        @include primary-bgc-hover($hover-green-100);
+    }
+    .green-200-bgc-hover:hover {
+        @include primary-bgc-hover($hover-green-200);
+    }
+    .green-300-bgc-hover:hover {
+        @include primary-bgc-hover($hover-green-300);
+    }
+    .red-100-bgc-hover:hover {
+        @include primary-bgc-hover($hover-red-100);
+    }
+    .pink-100-bgc-hover:hover {
+        @include primary-bgc-hover($hover-pink-100);
+    }
+    .pink-200-bgc-hover:hover {
+        @include primary-bgc-hover($hover-pink-200);
+    }
+    .pink-300-bgc-hover:hover {
+        @include primary-bgc-hover($hover-pink-300);
+    }
+    .yellow-100-bgc-hover:hover {
+        @include primary-bgc-hover($hover-yellow-100);
+    }
+    .yellow-200-bgc-hover:hover {
+        @include primary-bgc-hover($hover-yellow-200);
+    }
+    .yellow-300-bgc-hover:hover {
+        @include primary-bgc-hover($hover-yellow-300);
+    }
+    .purple-100-bgc-hover:hover {
+        @include primary-bgc-hover($hover-purple-100);
+    }
+    .purple-200-bgc-hover:hover {
+        @include primary-bgc-hover($hover-purple-200);
+    }
+}
