@@ -4,13 +4,13 @@
     "module": "commonjs",
     "lib": ["es2017", "dom"],
     "outDir": "dist",
-    "rootDir": "./",
+    "rootDir": "./demo",
     "noImplicitAny": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
   "include": [
-    "src/**/*"
+    "demo/**/*"
   ],
   "exclude": [
     "node_modules"
