@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "rootDir": "client",
-    "outDir": "built",
+    "rootDir": "src",
+    "outDir": "dist",
     "sourceMap": true,
     "module": "ESNext",
     "moduleResolution": "node",
@@ -11,8 +11,6 @@
     "resolveJsonModule": true,
     "importHelpers": true,
     "target": "es5",
-    "declarationDir": "built/types",
-    "declaration": true,
     "typeRoots": ["node_modules/@types"],
     "esModuleInterop": true,
     "lib": ["es5", "es6", "dom"],
@@ -25,5 +23,5 @@
     "node_modules",
     "*/node_modules"
   ],
-  "include": ["client/**/*.ts"]
+  "include": ["src/**/*.ts"]
 }

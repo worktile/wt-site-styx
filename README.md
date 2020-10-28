@@ -10,14 +10,13 @@ http://localhost:3210
 
 ```site-styx
     /-
-        client/    // 前端源码
+        src/    // 前端源码
         config/    // webpack 配置
-        src/    // server 源码 (指定端口号 || 3210)
+        demo/    // demo server 源码 (指定端口号 || 3210)
         .gitignore    // git 忽略
         nodemon.json    // nodemon 配置
         package.json    // 依赖配置
-        postcss.config.js    // postcss 配置
         README.md    // read me
-        tsconfig.front.json    // 前端's tsconfig
+        tsconfig.front.json    // front's tsconfig
         tsconfig.json    // server's tsconfig
 ```

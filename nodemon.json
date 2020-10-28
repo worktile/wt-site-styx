@@ -1,5 +1,5 @@
 {
-  "watch": ["src", "client"],
+  "watch": ["demo", "src"],
   "exec": "npm run dev",
   "ext": "ts"
 }
