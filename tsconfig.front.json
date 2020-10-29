@@ -11,6 +11,8 @@
     "resolveJsonModule": true,
     "importHelpers": true,
     "target": "es5",
+    "declarationDir": "built/static",
+    "declaration": true,
     "typeRoots": ["node_modules/@types"],
     "esModuleInterop": true,
     "lib": ["es5", "es6", "dom"],

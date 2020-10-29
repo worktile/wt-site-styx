@@ -39,7 +39,7 @@ const config = {
   mode: 'development',
   output: {
     path: path.resolve(__dirname, isDev ? './demo/public' : './built'),
-    filename: isDev ? 'js/[name].js' : 'static/js/[name].js',
+    filename: isDev ? 'js/[name].js' : 'static/[name].js',
     publicPath: '/'
   },
   resolve: {
@@ -107,8 +107,8 @@ const config = {
     // ]),
 
     new MiniCssExtractPlugin({
-      filename: !isDev ? 'static/css/[name].css' : 'css/[name].css',
-      chunkFilename: !isDev ? 'static/css/[name].css' : 'css/[name].css'
+      filename: !isDev ? 'static/styles/[name].css' : 'css/[name].css',
+      chunkFilename: !isDev ? 'static/styles/[name].css' : 'css/[name].css'
     }),
 
     new OptimizeCSSPlugin({ safe: true, map: false, discardComments: { removeAll: true } }),
@@ -132,7 +132,7 @@ const config = {
 Object.keys(config.entry).forEach(entry => {
   config.plugins.push(new HtmlWebpackPlugin({
     inject: isDev, // 是否自动引入 js/css
-    filename: entry + '.html',
+    filename: (isDev ? '' : 'static/') + entry + '.html',
     template: path.resolve(__dirname, `./src/views/${entry}.html`),
     chunks: ['app', entry],
     alwaysWriteToDisk: true,

@@ -20,7 +20,7 @@ app.on("error", (err: any, ctx: any) => {
     console.error("server error !!!!!!!!!!!!!", err, ctx);
 })
 
-const PORT: number = Number(process.env.PORT) || 3210
+const PORT: number = Number(process.env.PORT) || 3212
 
 app.listen(PORT, () => {
     console.log(`server is running at http://localhost:${ PORT }`);
