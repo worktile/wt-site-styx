@@ -1,35 +1,26 @@
 {
-  "name": "node-koa-demo",
+  "name": "@worktile/site-styx",
   "version": "1.0.0",
-  "description": "node koa demo",
+  "description": "Worktile site header and footer",
   "scripts": {
     "start": "nodemon",
     "dev": "rm -rf demo/built && cross-env NODE_ENV=development ts-node ./demo/index.ts",
-    "build": "rm -rf built && cross-env NODE_ENV=production webpack --env=production --mode=production --config ./webpack.config.js"
+    "build": "rm -rf built && cross-env NODE_ENV=production webpack --env=production --mode=production --config ./webpack.config.js && node ./lib/scripts/copy.ts",
+    "pub": "cd ./built && npm publish --access=public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RyenToretto/kjf_node.git"
+    "url": "git+https://github.com/worktile/site-styx.git"
   },
-  "keywords": [
-    "node",
-    "ts",
-    "koa",
-    "angular2"
-  ],
   "author": "RyenToretto",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RyenToretto/kjf_node/issues"
-  },
-  "homepage": "https://github.com/RyenToretto/kjf_node#readme",
-  "dependencies": {
+  "homepage": "https://github.com/worktile/site-styx#readme",
+  "dependencies": {},
+  "devDependencies": {
     "koa": "^2.7.0",
     "koa-ejs": "^4.2.0",
     "koa-router": "^7.4.0",
-    "koa-static": "^5.0.0"
-  },
-  "devDependencies": {
+    "koa-static": "^5.0.0",
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",

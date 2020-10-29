@@ -27,7 +27,7 @@ const router: Router = new Router()
 router
     .get('/', async (ctx: Koa.Context) => {
         await ctx.render('index', {
-            title: '首页'
+            title: 'site-styx'
         })
     })
 
