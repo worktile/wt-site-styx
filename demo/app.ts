@@ -30,6 +30,11 @@ router
             title: 'site-styx'
         })
     })
+    .get('/reverse', async (ctx: Koa.Context) => {
+        await ctx.render('reverse', {
+            title: 'site-styx'
+        })
+    })
 
 app
     .use(router.routes())

@@ -1,7 +1,7 @@
 const path = require('path')
 const glob = require('glob')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
@@ -90,7 +90,7 @@ const config = {
           loader: 'url-loader',
           options: {
             limit: 8192,
-            publicPath: isDev ? './' : 'https://cdn.worktile.com/assets/',
+            publicPath: isDev ? './' : 'https://cdn.worktile.com/assets/images/home/',
             name: isDev ? 'img/[name].[ext]' : 'static/img/[name].[ext]'
           }
         }]
@@ -98,14 +98,6 @@ const config = {
     ],
   },
   plugins: [
-    // new CopyWebpackPlugin([
-    //   {
-    //     from: path.resolve(__dirname, '../static'),
-    //     to: 'static',
-    //     ignore: ['.*']
-    //   }
-    // ]),
-
     new MiniCssExtractPlugin({
       filename: !isDev ? 'static/styles/[name].css' : 'css/[name].css',
       chunkFilename: !isDev ? 'static/styles/[name].css' : 'css/[name].css'
@@ -147,5 +139,11 @@ Object.keys(config.entry).forEach(entry => {
 })
 
 config.plugins.push(new HtmlWebpackHarddiskPlugin())
+config.plugins.push(new CopyWebpackPlugin({
+  patterns: [{
+    from: path.resolve(__dirname, './src/styles/shared'),
+    to: path.resolve(__dirname, './built/static/styles')
+  }]
+}))
 
 module.exports = config

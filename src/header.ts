@@ -1,7 +1,7 @@
 import './styles/header.scss';
 
 const initHeaderWT = () => {
-    window.addEventListener('DOMContentLoaded', function () {
+    window && window.addEventListener('DOMContentLoaded', function () {
         const eleHeaderSection = document.querySelector('.header-section');
         let firstEnterNavMenu = true;
         if (eleHeaderSection) {
@@ -72,5 +72,6 @@ const initHeaderWT = () => {
         })
     })
 }
+initHeaderWT()
 
-export default initHeaderWT()
+export default initHeaderWT

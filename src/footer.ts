@@ -1,7 +1,7 @@
 import './styles/footer.scss'; // 引入样式文件
 
 const initFooterWT = () => {
-    window.addEventListener('DOMContentLoaded', function (e) {
+    window && window.addEventListener('DOMContentLoaded', function (e) {
         const eleFooterHrefList = document.querySelector('.footer-href-layout');
         eleFooterHrefList && eleFooterHrefList.addEventListener('click', (e) => {
             let eleTarget: HTMLElement | null = e.target as HTMLElement;
@@ -25,5 +25,6 @@ const initFooterWT = () => {
         })
     })
 }
+initFooterWT()
 
-export default initFooterWT()
+export default initFooterWT
