@@ -524,17 +524,18 @@
                             color: $gray-666;
                             letter-spacing: 1px;
                             text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                             .worktile-phone {
                               display: inline;
                               width: 106px;
                               max-width: unset;
-                              transform: translateY(1px);
                             }
                             .worktile-phone-blue {
                               display: none;
                               width: 106px;
                               max-width: unset;
-                              transform: translateY(1px);
                             }
                             &:hover {
                               color: $primary-new;
