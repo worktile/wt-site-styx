@@ -16,6 +16,7 @@
   box-sizing: border-box;
   width: 100%;
   height: $header-normal-height;
+  font-family: $font-family-default;
   transition: all 300ms linear;
   &.open-drainage,
   &.touch-top {
@@ -187,7 +188,7 @@
             .logo-hover-menu {
               border-radius: 4px;
               opacity: 0;
-              transition: opacity .3s linear;
+              transition: opacity 300ms linear;
               padding: 20px 16px;
               box-sizing: border-box;
               width: 276px;
@@ -319,7 +320,7 @@
                 box-sizing: border-box;
                 width: 100%;
                 height: 0;
-                transition: all .3s linear;
+                transition: all 300ms linear;
                 .nav-menu-box {
                   width: 100%;
                   height: 0;
@@ -333,7 +334,7 @@
                     position: relative;
                     z-index: 2;
                     background-color: $white;
-                    transition: all .3s linear;
+                    transition: all 300ms linear;
                     .nav-menu-top {
                       .nav-menu-wrapper {
                         display: flex;
@@ -523,17 +524,18 @@
                             color: $gray-666;
                             letter-spacing: 1px;
                             text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                             .worktile-phone {
                               display: inline;
                               width: 106px;
                               max-width: unset;
-                              transform: translateY(1px);
                             }
                             .worktile-phone-blue {
                               display: none;
                               width: 106px;
                               max-width: unset;
-                              transform: translateY(1px);
                             }
                             &:hover {
                               color: $primary-new;
@@ -566,14 +568,18 @@
                 }
                 /** 4行 - 三行 = 603 - 485 = 118 */
                 .nav-hover-menu {
-                  &.solution-plan {
-                    height: 485px;
-                  }
-                  &.supports {
-                    height: 603px;
-                  }
                   .nav-menu-box {
                     height: $header-normal-menu-height;
+                  }
+                }
+                &.solution-plan {
+                  .nav-hover-menu {
+                    height: 485px;
+                  }
+                }
+                &.supports {
+                  .nav-hover-menu {
+                    height: 603px;
                   }
                 }
               }
@@ -733,17 +739,6 @@
           }
           .center-nav-box {
             display: none;
-            .header-nav-list {
-              .header-nav-item {
-                &:hover {
-                  .nav-hover-menu {
-                    .nav-menu-box {
-                      height: $header-normal-menu-height--sm;
-                    }
-                  }
-                }
-              }
-            }
           }
         }
         .right-login-box {
@@ -791,6 +786,7 @@
                   margin-left: 0;
                   height: 50px;
                   border-bottom: 1px solid #efefef;
+                  transition: height 300ms linear;
                   &:hover,
                   &:active {
                     height: 50px;
@@ -807,9 +803,13 @@
                     }
                     /** 4行 - 三行 = 603 - 485 = 118 */
                     .nav-hover-menu {
-                      &.solution-plan,
-                      &.supports,
                       .nav-menu-box {
+                        height: 0;
+                      }
+                    }
+                    &.solution-plan,
+                    &.supports {
+                      .nav-hover-menu {
                         height: 0;
                       }
                     }
@@ -830,9 +830,13 @@
                     }
                     /** 4行 - 三行 = 603 - 485 = 118 */
                     .nav-hover-menu {
-                      &.solution-plan,
-                      &.supports,
                       .nav-menu-box {
+                        height: auto;
+                      }
+                    }
+                    &.solution-plan,
+                    &.supports {
+                      .nav-hover-menu {
                         height: auto;
                       }
                     }
@@ -953,6 +957,9 @@
                 color: $primary;
                 background-color: #fbfdfe;
                 position: relative;
+                &.header-phone-num {
+                  display: none;
+                }
               }
             }
           }

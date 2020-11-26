@@ -90,8 +90,8 @@ const config = {
           loader: 'url-loader',
           options: {
             limit: 8192,
-            publicPath: isDev ? './' : 'https://cdn.worktile.com/assets/images/home/',
-            name: isDev ? 'img/[name].[ext]' : 'static/img/[name].[ext]'
+            publicPath: isDev ? './' : 'https://cdn.worktile.com/',
+            name: isDev ? 'img/[name].[ext]' : 'static/site/img/[name].[hash].[ext]'
           }
         }]
       }
