@@ -288,6 +288,13 @@
               &:first-child {
                 margin-left: 0;
               }
+              &.production {
+                .nav-hover-menu .nav-menu-box .nav-menu-content .nav-menu-top .nav-menu-wrapper .nav-menu-type .nav-menu-list {
+                  .nav-menu-item.one-line-des {
+                    height: 74px;
+                  }
+                }
+              }
               .nav-title-icon {
                 display: flex;
                 align-items: center;
@@ -572,6 +579,11 @@
                     height: $header-normal-menu-height;
                   }
                 }
+                &.production {
+                  .nav-hover-menu {
+                    height: 350px;
+                  }
+                }
                 &.solution-plan {
                   .nav-hover-menu {
                     height: 485px;
@@ -807,6 +819,7 @@
                         height: 0;
                       }
                     }
+                    &.production,
                     &.solution-plan,
                     &.supports {
                       .nav-hover-menu {
@@ -834,9 +847,17 @@
                         height: auto;
                       }
                     }
+                    &.production,
                     &.solution-plan,
                     &.supports {
                       .nav-hover-menu {
+                        height: auto;
+                      }
+                    }
+                  }
+                  &.production {
+                    .nav-hover-menu .nav-menu-box .nav-menu-content .nav-menu-top .nav-menu-wrapper .nav-menu-type .nav-menu-list {
+                      .nav-menu-item.one-line-des {
                         height: auto;
                       }
                     }
@@ -872,7 +893,7 @@
                               width: 100%;
                               left: 0;
                               .nav-menu-title-line {
-                                padding: 33px 20px 0;
+                                padding: 20px 20px 0;
                                 .nav-menu-title {
                                   color: $custom-aaa;
                                   font-size: 0.75rem;
