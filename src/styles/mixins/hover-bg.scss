@@ -48,6 +48,9 @@
     .blue-400-bgc-hover:hover {
         @include primary-bgc-hover($hover-blue-400);
     }
+    .blue-408-bgc-hover:hover {
+        @include primary-bgc-hover($hover-blue-408);
+    }
     .blue-500-bgc-hover:hover {
         @include primary-bgc-hover($hover-blue-500);
     }
@@ -63,8 +66,14 @@
     .green-300-bgc-hover:hover {
         @include primary-bgc-hover($hover-green-300);
     }
+    .green-400-bgc-hover:hover {
+        @include primary-bgc-hover($hover-green-400);
+    }
     .red-100-bgc-hover:hover {
         @include primary-bgc-hover($hover-red-100);
+    }
+    .red-208-bgc-hover:hover {
+        @include primary-bgc-hover($hover-red-208);
     }
     .pink-100-bgc-hover:hover {
         @include primary-bgc-hover($hover-pink-100);

@@ -40,10 +40,17 @@
           .footer-column-list {
             margin-top: 32px;
           }
+          &:last-child {
+            .footer-column-list {
+              .footer-href-item {
+                padding-right: 0;
+              }
+            }
+          }
         }
       }
       .footer-last-column {
-        padding-left: 70px;
+        margin-left: 120px;
         max-width: 267px;
         .last-href-item {
           padding-right: 0;
@@ -59,7 +66,7 @@
       }
       .footer-href-item {
         margin-top: 16px;
-        padding-right: 130px;
+        padding-right: 150px;
         &:first-child {
           margin-top: 0;
         }
@@ -183,7 +190,7 @@
       .copyright-img-box {
         position: absolute;
         top: 37px;
-        right: 42px;
+        right: 0;
         .copyright-img-trust {
           float: left;
           display: block;
@@ -315,6 +322,8 @@
         .footer-last-column {
           padding: 0;
           max-width: unset;
+          width: 100%;
+          margin: 0;
           .footer-column-title {
             text-align: center;
           }
