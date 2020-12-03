@@ -24,9 +24,9 @@
   .footer-section-wrapper {
     .footer-top-nav {
       display: flex;
+      justify-content: space-between;
       padding-bottom: 43px;
       .footer-logo-column {
-        margin-right: 104px;
         .footer-wt-logo {
           display: block;
           .footer-logo {
@@ -50,7 +50,6 @@
         }
       }
       .footer-last-column {
-        margin-left: 120px;
         max-width: 267px;
         .last-href-item {
           padding-right: 0;
