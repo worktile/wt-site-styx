@@ -1,6 +1,6 @@
 {
   "name": "@worktile/wt-site-styx",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Worktile site header and footer",
   "scripts": {
     "start": "nodemon",
