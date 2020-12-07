@@ -295,6 +295,25 @@
                   }
                 }
               }
+              &.wechatwork {
+                .nav-title-icon {
+                  > a {
+                    position: relative;
+                    .nav-title-tips {
+                      height: 21px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      position: absolute;
+                      right: -68px;
+                      top: 0;
+                      > img {
+                        width: 65px;
+                      }
+                    }
+                  }
+                }
+              }
               .nav-title-icon {
                 display: flex;
                 align-items: center;
@@ -878,6 +897,14 @@
                       display: flex;
                       align-items: center;
                       justify-content: flex-start;
+                      .nav-title-tips {
+                        height: 100%;
+                        right: auto;
+                        left: 80px;
+                        > img {
+                          width: 50px;
+                        }
+                      }
                     }
                   }
                   .nav-hover-menu {
